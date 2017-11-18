@@ -1,0 +1,44 @@
+{
+  "name": "Test PTUT",
+  "assets": [
+    {
+      "id": "10",
+      "name": "PlayerMovment",
+      "type": "script"
+    },
+    {
+      "id": "15",
+      "name": "tileset",
+      "type": null,
+      "children": [
+        {
+          "id": "13",
+          "name": "tile set iut",
+          "type": "tileSet"
+        },
+        {
+          "id": "12",
+          "name": "Tile Set Halim",
+          "type": "tileSet"
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "name": "map",
+      "type": null,
+      "children": [
+        {
+          "id": "14",
+          "name": "map iut",
+          "type": "tileMap"
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "name": "Scene",
+      "type": "scene"
+    }
+  ]
+}

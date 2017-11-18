@@ -1,0 +1,1 @@
+{"behaviors":{"PlayerMovmentBehavior":{"scriptId":"10","line":0,"parentBehavior":null,"properties":[{"name":"speed","type":"number"},{"name":"last_key","type":"string"}]}}}
