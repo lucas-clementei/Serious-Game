@@ -1,0 +1,45 @@
+class RandomMoveBehavior extends Sup.Behavior {
+  speed=0.1;
+  
+  update() {
+     let x=0,y=0,key="down",rand=0,sleep=0,i=0;
+    
+    rand=Sup.Math.Random.integer(1,4);
+    sleep=Sup.Math.Random.integer(1,10);
+    if(sleep==5){
+      if(rand==1){
+        key="up";
+        y=this.speed;
+
+      }
+      if(rand==2){
+        key="down";
+        y=-this.speed;
+      }
+      if(rand==3){
+        key="right";
+        x=this.speed;
+      }
+      if(rand==4){
+        key="left";
+        x=-this.speed
+      }this.move(x,y,key);
+      
+      
+  }
+    
+    
+    
+  }
+  
+  move(x,y,key){
+    let i=0;
+    if(x!=0 || y!=0){
+      this.actor.spriteRenderer.setAnimation("move_"+key);
+      for(i=0;i<10;i++){this.actor.move(x,y,0);}
+    }
+  
+
+  }
+}
+Sup.registerBehavior(RandomMoveBehavior);

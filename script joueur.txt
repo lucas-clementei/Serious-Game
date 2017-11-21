@@ -1,0 +1,41 @@
+class PlayerMoveBehavior extends Sup.Behavior {
+  speed=0.1;
+  
+  update() {
+    let x=0,y=0,key="down";
+    if(Sup.Input.isKeyDown("UP")){
+      key="up";
+      y=this.speed;
+      
+    }
+    if(Sup.Input.isKeyDown("DOWN")){
+      key="down";
+      y=-this.speed;
+    }
+    if(Sup.Input.isKeyDown("RIGHT")){
+      key="right";
+      x=this.speed;
+    }
+    if(Sup.Input.isKeyDown("LEFT")){
+      key="left";
+      x=-this.speed
+    }
+    this.move(x,y,key);
+    
+  }
+  
+  
+  move(x,y,key){
+    if(x!=0 || y!=0){
+      this.actor.spriteRenderer.setAnimation("move_"+key);
+      this.actor.move(x,y,0);
+    }
+  
+  else{
+    this.actor.spriteRenderer.setAnimation("idle");
+    this.actor.move(0,0,0);
+    }
+  }
+}
+Sup.registerBehavior(PlayerMoveBehavior);
+
